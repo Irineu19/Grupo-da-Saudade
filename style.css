@@ -153,6 +153,7 @@ footer {
   nav a {
     width: 100%;
     text-align: center;
+    font-size: large;
   }
 
   .carousel {
