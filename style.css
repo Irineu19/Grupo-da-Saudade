@@ -1,136 +1,165 @@
 body {
-  background-color: #fff8e1;
-  font-family: 'Merriweather', serif;
+  font-family: 'Calibri', 'Trebuchet MS', sans-serif;
   margin: 0;
   padding: 0;
-  color: #333;
+  background-color: #fff8e1;
+  color: #222;
 }
 
 header {
+  font-family: 'Courier', 'Trebuchet MS', sans-serif;
+  font-size: larger;
+  background-color: #fff8e1;
+  padding: 1.5em 1em;
+  color: black;
   text-align: center;
-  padding: 2rem 1rem 1rem;
 }
 
-.header-title {
+header h1 {
+  margin: 0;
+  color: #b22222;
+}
+
+header p {
+  margin-top: 0.5em;
+  font-size: 1.1em;
+}
+
+nav {
+  background-color: #fff8e1;
+  padding: 1em;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5em;
+}
+
+nav a {
+  background-color: black;
+  font-family: 'Courier New', Courier, monospace;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.8em 1.5em;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+  display: inline-block;
+}
+
+nav a:hover {
+  background-color: #838383;
+}
+
+section {
+  background-color: #ffffff;
+  padding: 2em;
+  margin: 2em auto;
+  max-width: 900px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  scroll-margin-top: 100px; 
+}
+
+section h2 {
+  color: #b22222;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.carousel img {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 8px;
+  display: block;
+}
+
+.carousel {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.5rem;
-  font-family: 'Courier', cursive;
-  color: #b22222;
-  font-size: 4rem;
+  gap: 1em;
+  margin-top: 1.5em;
   flex-wrap: wrap;
 }
 
-.tagline {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 0.5rem;
-  font-size: 1.2rem;
-  color: #aa2c2c;
+.carousel button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5em;
 }
 
-.container {
-  max-width: 900px;
-  margin: auto;
-  padding: 1rem;
+.carousel button img {
+  width: 40px;
+  height: 40px;
 }
 
-.section {
-  background-color: #ffffff;
-  padding: 2rem;
-  margin: 2rem 0;
-  border-radius: 12px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+.carousel button.esquerda {
+  transform: rotate(180deg);
 }
 
-h2 {
-  color: #b22222;
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
-}
-
-h3 {
-  font-size: 1.1rem;
-  margin-bottom: 1rem;
-}
-
-p {
-  line-height: 1.6;
-  text-align: justify;
-}
-
-.gallery-img {
+#videos video {
   width: 100%;
+  max-width: 480px;
   border-radius: 8px;
-  margin-top: 1rem;
 }
 
 footer {
+  background-color: #000000;
+  color: white;
   text-align: center;
-  padding: 20px;
-  background-color: #ffffff;
-  color: #000000;
-  margin-top: 60px;
-  font-size: 14px;
+  padding: 10px;
+  font-size: 0.9em;
 }
 
-/* ------- RESPONSIVIDADE ------- */
-@media (max-width: 1024px) {
-  .header-title {
-    font-size: 3rem;
-  }
-
-  .header-img {
-    width: 60px;
-    left: 20%;
-  }
-
-  .container {
-    padding: 1rem;
+@media (max-width: 1000px) {
+  section{ 
+    margin: 1em;
   }
 }
 
 @media (max-width: 768px) {
-  .header-title {
-    font-size: 2rem;
-    flex-direction: column;
-    text-align: center;
+  nav a {
+    padding: 0.7em 1em;
+    font-size: 0.9em;
   }
 
-  .header-img {
-    position: static;
-    width: 50px;
-    transform: none;
-    margin-bottom: 10px;
+  header h1 {
+    font-size: 1.8em;
   }
 
-  .tagline {
-    font-size: 1rem;
-    text-align: center;
-    padding: 0 1rem;
-  }
-
-  .section {
-    padding: 1.5rem 1rem;
+  section {
+    margin: 1em;
+    padding: 1.5em;
   }
 }
 
-@media (max-width: 480px) {
-  .header-title {
-    font-size: 1.5rem;
+@media (max-width: 500px) {
+  nav ul {
+    flex-direction: row;
+    align-items: center;
   }
 
-  h2 {
-    font-size: 1.2rem;
+  nav a {
+    width: 100%;
+    text-align: center;
   }
 
-  h3 {
-    font-size: 1rem;
+  .carousel {
+    flex-direction: column;
   }
 
-  .gallery-img {
-    margin-top: 0.5rem;
+  #videos video {
+    max-width: 100%;
   }
 }

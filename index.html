@@ -1,44 +1,93 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Grupo da Saudade</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Rock+Salt&display=swap" rel="stylesheet" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grupo Cultural da Saudade</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
+  <nav>
+    <ul>
+      <li><a href="#inicio">Início</a></li>
+      <li><a href="#historia">História</a></li>
+      <li><a href="#agenda">Agenda</a></li>
+      <li><a href="#galeria">Galeria</a></li>
+      <li><a href="#videos">Vídeos</a></li>
+      <li><a href="#sobre">Sobre</a></li>
+    </ul>
+  </nav>
   <header>
-    <div class="header-title">
-      Grupo da Saudade
-    </div>
-    <p class="tagline">Preservando a tradição nordestina através da dança e do forró</p>
+    <h1>Grupo da Saudade</h1>
+    <p>Preservando a tradição nordestina através da dança e do forró!</p>
   </header>
 
-  <main class="container">
+  <section id="inicio">
+    <h2>Bem-vindo</h2>
+    <p>Este é o site oficial do Grupo da Saudade. Conheça nossa história, participe de nossos eventos e veja como mantemos viva a cultura nordestina!</p>
+  </section>
 
-    <section class="section">
-      <h2>Nossa História</h2>
-      <h3>Celebrando cultura, dança e vida!</h3>
-      <p>
-        O Grupo da Saudade foi criado em 1995 durante as festas juninas da cidade, com o objetivo de transformar a vida dos idosos, oferecendo alegria, inclusão e saúde por meio da música e dança, especialmente o forró. Com o tempo, o grupo cresceu e passou a incluir jovens e crianças, reunindo cerca de 40 participantes apaixonados pelas tradições nordestinas. A dança se tornou uma ferramenta de transformação social, promovendo autoestima e fortalecendo os laços entre as gerações.
-      </p>
-      <p> Além de preservar o patrimônio cultural local, o grupo mantém vivas manifestações como o reisado, o carnaval e as festas de São João, que estão sendo ameaçadas pelas culturas contemporâneas. Por meio de apresentações e projetos, o Grupo da Saudade assegura que as tradições populares nordestinas continuem emocionando e inspirando novas gerações, celebrando a vida, o pertencimento e a história do povo nordestino.</p>
-      <!-- conteúdo restante -->
-    </section>
+  <section id="historia">
+    <h2>Nossa História</h2>
+    <p> O Grupo da Saudade, de Monte Santo, na Bahia, foi criado em 1995 durante as festas juninas da cidade, com o objetivo de transformar a vida dos idosos, trazendo uma vida leve e saudável através da música e do  forró. Com o tempo, o grupo cresceu e passou a incluir jovens e crianças, reunindo cerca de 40 participantes apaixonados pelas tradições nordestinas. A dança se tornou uma ferramenta de transformação social, promovendo autoestima e fortalecendo os laços entre as gerações.</p>
+    <p> Além de preservar o patrimônio cultural local, o grupo mantém vivas manifestações como o reisado, desfile de carnaval e quadrilhas nas festas de São João, que estão sendo ameaçadas pelas culturas contemporâneas. Por meio de apresentações e projetos, o Grupo da Saudade assegura que as tradições populares nordestinas continuem emocionando e inspirando novas gerações, celebrando a vida, o pertencimento e a história do povo nordestino.</p>
+  </section>
 
-    <section class="section">
-      <h2>Galeria</h2>
-      <h3>Momentos especiais que guardamos na memória</h3>
-      <p>Confira abaixo alguns registros das nossas apresentações.</p>
-      <img id="galeria" src="imagens/grupodasaudade.jpg" alt="Foto da galeria" class="gallery-img" />
-    </section>
+  <section id="agenda">
+    <h2>Agenda</h2>
+    <p><strong>Próxima apresentação:</strong> Festa de São João</p>
+    <p>Prepare-se para muita música, dança e tradição com o Grupo da Saudade em mais uma grande celebração junina!</p>
+  </section>
+  
+  <section id="galeria">
+    <h2>Galeria de Fotos</h2>
+    <h3>Momentos especiais que guardamos na memória</h3>
+    <div class="carousel">
+      <button class="seta esquerda" onclick="anterior()">
+        <img src="/imagens/seta.png" alt="anterior">
+      </button>
+      <img id="foto" src="imagens/grupodasaudade.jpg" alt="Foto da apresentação">
+      <button class="seta direita" onclick="proximo()">
+        <img src="/imagens/seta.png" alt="próximo">
+      </button>
+    </div>
+  </section>
 
-  </main>
+  <section id="videos">
+    <h2>Apresentações</h2>
+    <h3>Confira abaixo alguns registros das nossas apresentações.</h3>
+    <div class="carousel">
+      <button class="seta esquerda" onclick="anterior()">
+        <img src="/imagens/seta.png" alt="anterior">
+      </button>
+      <video id="video" controls>
+        <source src="videos/carnaval.mp4" type="video/mp4">
+        Seu navegador não suporta o vídeo.
+      </video>
+      <button class="seta direita" onclick="proximo()">
+        <img src="/imagens/seta.png" alt="próximo">
+      </button>
+    </div>
+  </section>
+  
+
+  <section id="sobre">
+    <h2>Sobre</h2>
+    <p>
+      Este site foi criado para divulgar o trabalho do Grupo Cultural da Saudade, valorizando a cultura nordestina através da dança, música e convivência entre gerações.
+    </p>
+    <p>
+      Se você deseja convidar o grupo para participar de projetos, eventos ou apresentações culturais, entre em contato com o responsável:
+    </p>
+    <ul>
+      <li><strong>Responsável:</strong> Wellington Silva</li>
+      <li><strong>Instagram:</strong> <a href="https://instagram.com/wellingtonbenicioo" target="_blank">@wellingtonbenicioo</a></li>
+    </ul>
+  </section>
+  
 
   <footer>
-    © 2025 - Projeto de Extensão | Irineu dos Santos Souza
+    <p>&copy; Projeto de Extensão | Irineu dos Santos Souza</p>
   </footer>
 
   <script src="script.js"></script>
