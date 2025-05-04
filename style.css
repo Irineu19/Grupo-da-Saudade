@@ -76,20 +76,19 @@ section h2 {
   font-family: 'Courier New', Courier, monospace;
 }
 
-.carousel img {
-  width: 100%;
-  max-width: 600px;
-  border-radius: 8px;
-  display: block;
-}
-
 .carousel {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 1em;
   margin-top: 1.5em;
-  flex-wrap: wrap;
+}
+
+.carousel img {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 8px;
+  display: block;
 }
 
 .carousel button {
@@ -122,16 +121,22 @@ footer {
   font-size: 0.9em;
 }
 
+/* Responsivo */
+
 @media (max-width: 1000px) {
-  section{ 
+  section {
     margin: 1em;
   }
 }
 
 @media (max-width: 768px) {
+  .carousel img {
+    width: 65%;
+  }
+
   nav a {
     padding: 0.7em 1em;
-    font-size: 1.5em;
+    font-size: 0.9em;
   }
 
   header h1 {
@@ -145,6 +150,21 @@ footer {
 }
 
 @media (max-width: 500px) {
+  .carousel {
+    flex-wrap: nowrap;
+    flex-direction: row;
+  }
+
+  .carousel img {
+    width: 80%;
+    margin-left: -15px;
+  }
+
+  .carousel button {
+    position: relative;
+    margin: 0 5px;
+  }
+
   nav ul {
     flex-direction: row;
     align-items: center;
@@ -153,11 +173,6 @@ footer {
   nav a {
     width: 100%;
     text-align: center;
-    font-size: large;
-  }
-
-  .carousel {
-    flex-direction: column;
   }
 
   #videos video {
